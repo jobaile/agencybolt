@@ -1,0 +1,22 @@
+{
+  "name": "agencybolt",
+  "version": "1.0.0",
+  "description": "Agency Bolt team project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jobaile/agencybolt.git"
+  },
+  "author": "Joanna Baile and Logan Litman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jobaile/agencybolt/issues"
+  },
+  "homepage": "https://github.com/jobaile/agencybolt#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
