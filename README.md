@@ -6,7 +6,8 @@ We created the documents necessary for the project.
 
 ## Built with
 * [Bootstrap](https://getbootstrap.com/) - Bootstrap Framework
-* [SASS] 
+* [SASS](https://sass-lang.com/) - SASS
+* [gulp](https://gulpjs.com/) - gulp.js
 
 ## Authors
 * **Logan Litman** (https://github.com/loganlitman) - *Designer*
