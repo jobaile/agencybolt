@@ -7,12 +7,125 @@
     <title>Bolt Designs</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet"> <!--CSS FILE YOU CAN EDIT-->
+    <link href="sass/style.css" rel="stylesheet"> <!--SASS CSS-->
+    <link href="css/main.css" rel="stylesheet"> <!--OTHER CSS-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
 
   <body>
 
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <img src="images/logo.png" width="220" height="200"/>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Our Work</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+      <div class="container-fluid">
+        
+        <section>
+          <div class="row" id="about-section">
+            <h2 class="hidden">About Us</h2>
+            
+            <div class="col col-md-6">
+              <p>gravida eleifend dolor, eget tristique lorem luctus ac. Pellentesque tincidunt ultricies nisi, vitae tristique eros condimentum in. Mauris id lacinia quam, in imperdiet sem. Duis aliquam tortor lorem, vitae tempor odio ornare ut. Quisque auctor augue</p>
+            </div>
+
+            <div class="team-picture" id="joanna"> <!--JOANNA-->
+                <div class="social-media-links">
+                    <ul>
+                      <li><a href="https://google.ca" target="_blank"><img src="images/logo-facebook.png" width="35"/></a></li>
+                      <li><a href="https://google.ca" target="_blank"><img src="images/logo-instagram.svg"width="35"/></a></li>
+                      <li><a href="https://google.ca" target="_blank"><img src="images/logo-linkedin.svg" width="35"/></a></li>
+                    </ul>
+                  </div>
+
+            <div class="col col-md-3">
+                <p class="box">test</p>
+            </div>
+
+          </div>
+          <div class="team-picture col col-md-3" id="logan"> <!--LOGAN-->
+              <div class="social-media-links">
+                  <ul>
+                    <li><a href="https://google.ca" target="_blank"><img src="images/logo-facebook.png" width="35"/></a></li>
+                    <li><a href="https://google.ca" target="_blank"><img src="images/logo-instagram.svg"width="35"/></a></li>
+                    <li><a href="https://google.ca" target="_blank"><img src="images/logo-linkedin.svg" width="35"/></a></li>
+                  </ul>
+                </div>
+            <p class="box">test</p>
+        </div>
+        </section>
+        
+        <section>
+          <h2>Our Work</h2>
+          <div class="filterBtn">
+            <button>Show All</button>
+            <button>Logan</button>
+            <button>Joanna</button>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <img src="images/joannawork1.png" width="300"/>
+            </div>
+            <div class="col-12 col-md-4">
+              <img src="images/joannawork2.png" width="300"/>
+            </div>
+            <div class="col-12 col-md-4">
+              <img src="images/purevolume.png" width="300"/>
+            </div>
+            <div class="col-12 col-md-4">
+              <img src="images/work1logan.png" width="300"/>
+            </div>
+            <div class="col-12 col-md-4">
+              <img src="images/work2logan.png" width="300"/>
+            </div>
+            <div class="col-12 col-md-4">
+              <img src="images/agencyprojectlogan.png" width="300"/>
+            </div>
+        </section>
+        
+        <section>
+          <h2>Contact Us</h2>
+            <form>
+              <div class="row">
+                <div class="col">
+                    <label>First Name</label>
+                    <input type="text" name="firstname" placeholder="Your name" required>
+                </div>
+                <div class="col">
+                    <label>E-mail</label>
+                    <input type="text" name="email" placeholder="Your e-mail" required>
+                </div>
+                <div class="col">
+                    <label>Message</label>
+                    <textarea id="message" name="message" style="height:200px" required></textarea>
+                </div>
+              </div>
+        
+            <input type="submit" value="Submit">
+          </form>
+        </section>
+        
+        <footer>
+            <button id="backToTop">Back To Top</button>
+          <img src="images/logo.png" width="50" height="50"/>
+        </footer>
+      </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
