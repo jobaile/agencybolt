@@ -1,5 +1,5 @@
 (() => {
-  console.log("SEAF fired");
+  //console.log("SEAF fired");
 
   //variables
   var TopBtn = document.querySelector('#backToTop');
