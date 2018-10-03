@@ -14,7 +14,7 @@
 
   <body>
 
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <nav class="navbar navbar-expand-lg navbar-dark">
               <img src="images/logo.png" width="220" height="200"/>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -70,31 +70,50 @@
             <p class="box">test</p>
         </div>
         </section>
+
+        <section> 
+          <div class="container-fluid" id="videoPlayer">
+
+            <video id="headerVid" poster="" alt="promotional video">
+              <source src="video/Bolt-1.mp4" type="video/mp4"/>
+                Your browser does not support the video files! Please try another browser.
+            </video>
+            
+            <div id="vidControls">
+              <button id="rewind"><i class="fas fa-step-backward"></i></button>
+              <button id="playPause"><i class="fas fa-play"></i></button>
+              <input type="range" id="seek-bar" class="slider" value="0">
+              <button id="muteVideo" class="control"><i class="fas fa-volume-up"></i></button>
+              <input type="range" id="volumeBar" value="1" min="0" max="1" step="0.1">              
+              <button id="full-screen" class="controls"><i class="fa fa-expand-arrows-alt"></i></button>
+            </div>
+          </div>
+        </section>
         
         <section>
           <h2>Our Work</h2>
-          <div class="filterBtn">
-            <button>Show All</button>
-            <button>Logan</button>
-            <button>Joanna</button>
+          <div class="filterBtnContainer">
+            <button class="filterBtn active" id="btnAll">Show All</button>
+            <button class="filternBtn" id="btnLogan">Logan</button>
+            <button class="filterBtn" id="btnJoanna">Joanna</button>
           </div>
           <div class="row">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 portflio portJoanna all">
               <img src="images/joannawork1.png" width="300"/>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 portflio portJoanna all">
               <img src="images/joannawork2.png" width="300"/>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 portflio portJoanna portLogan all">
               <img src="images/purevolume.png" width="300"/>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 portflio portLogan all">
               <img src="images/work1logan.png" width="300"/>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 portflio portLogan all">
               <img src="images/work2logan.png" width="300"/>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 portflio portLogan all">
               <img src="images/agencyprojectlogan.png" width="300"/>
             </div>
         </section>
