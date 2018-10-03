@@ -17,7 +17,7 @@ We created the documents necessary for the project.
 Open Terminal or Command Line
 
 ```
-# Pick the location of where this repository will be downloaded, for example purposes this will be on your desktop
+# Pick the location of where this repository will be downloaded - for example purposes this will be on your desktop
 
 $ cd Desktop
 
