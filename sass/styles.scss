@@ -24,7 +24,7 @@ ul li a {
 }
 
 .container {
-    background-color: $black;
+    background-color: $bg-black;
 }
 
 a.nav-link {
@@ -86,7 +86,7 @@ a.nav-link {
 /***************************/
 
 #video-section {
-    background-color: $white;
+    background-color: $bg-white;
 }
 #vidBg {
     background-color: $main-colour;
@@ -227,10 +227,11 @@ label {
     }
 
     a.nav-link {
-        margin-left: 50px;
+        margin: 0;
+        float: left;
     }
   }
 
   @media (min-width: 992px) { 
-      
+
   } /*LARGE SIZE*/
