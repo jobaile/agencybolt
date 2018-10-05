@@ -16,6 +16,14 @@ We created the documents necessary for the project.
 * **Logan Litman** (https://github.com/loganlitman) - *Designer*
 * **Joanna Baile** (https://github.com/jobaile) - *Developer*
 
+## Things We Wanted
+* [x] adobe xD prototypes
+* [x] light box; however, wanted more functionalities
+* [x] video player
+* [x] back to top
+* [ ] data filtering (joanna struggled with this)
+* [x] responsive
+
 ## Installing
 Open Terminal or Command Line
 
@@ -33,11 +41,3 @@ $ git clone https://github.com/jobaile/agencybolt.git
 $ cd agencybolt
 
 ```
-
-##Things We Wanted
-- [x] adobe xD prototypes
-- [x] light box; however, wanted more functionalities
-- [x] video player
-- [x] back to top
-- [ ] data filtering (joanna struggled with this)
-- [x] responsive
