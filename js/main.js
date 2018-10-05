@@ -3,6 +3,7 @@
 
   //Variables
   var TopBtn = document.querySelector('#backToTop');
+
   var video = document.querySelector("#headerVid");
   var playButton = document.querySelector("#playPause");
   var seekBar = document.querySelector("#seek-bar");
@@ -11,6 +12,12 @@
   var volumeBar = document.querySelector('#volumeBar');
   var fullVideo = document.querySelector("#full-screen");
 
+  var modalBox = document.querySelector("#modalBox");
+  var modalExit = document.querySelector("#exit");
+  var portArray = ["gallery1", "gallery2", "galley3", "gallery4"]; 
+  var portfolio = document.querySelector("#gallery");
+  var image = portfolio.querySelectorAll("img");
+  var showOne = document.querySelector("#first"); //modal image content
 
   //Functions
 
@@ -93,17 +100,37 @@
     }
   }
 
+  //Lightbox
+  //Open modal
+    function openModal() {
+      //console.log("from openModal");
+      modalBox.style.display = "block";
+      showOne.src="images/" + portArray[evt.currentTarget.dataset.nav]+".jpg";
+    }
+    
+    function closeModal() {
+      //console.log("from closeModal");
+    modalBox.style.display = "none";
+    }
+
   //Event Listeners
   window.addEventListener('scroll', trackScroll);
   TopBtn.addEventListener('click', backToTop);
 
-  playButton.addEventListener("click", playVideo); //VIDEO
+  playButton.addEventListener("click", playVideo, false); //VIDEO
   seekBar.addEventListener("change", progressBar, false); //SEEK BAR
   muteButton.addEventListener("click", muteVideo, false); //MUTE
   volumeBar.addEventListener('change', changeVolume, false); // VOLUME BAR
   rewindVideo.addEventListener("click", rewindVid, false); //REWIND VIDEO X
   fullVideo.addEventListener("click", fullScreen); //FULLSCREEN
   video.addEventListener("timeupdate", progPlay, false); //TIME UPDATE
+
+  for(var i=0;i<image.length; i++){
+    console.log(i);
+  image[i].addEventListener("click", openModal);
+  }
+
+  modalExit.addEventListener("click", closeModal, false);
 
 
 })();
