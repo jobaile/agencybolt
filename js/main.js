@@ -14,10 +14,12 @@
 
   var modalBox = document.querySelector("#modalBox");
   var modalExit = document.querySelector("#exit");
-  var portArray = ["gallery1", "gallery2", "galley3", "gallery4"]; 
+  var portArray = ["image01", "image02", "image03", "image04", "image05", "image06"]; 
   var portfolio = document.querySelector("#gallery");
   var image = portfolio.querySelectorAll("img");
   var showOne = document.querySelector("#first"); //modal image content
+
+  var elem = document.querySelector(".caption-container"); // caption
 
   //Functions
 
@@ -102,17 +104,48 @@
 
   //Lightbox
   //Open modal
-    function openModal() {
-      //console.log("from openModal");
+    function openModalOne() {
       modalBox.style.display = "block";
-      showOne.src="images/" + portArray[evt.currentTarget.dataset.nav]+".jpg";
+      showOne.src="images/image01.png";
+      document.getElementById('caption').innerHTML = image[0].alt;
+    }
+
+    function openModalTwo() {
+      modalBox.style.display = "block";
+      showOne.src="images/image02.png";  
+      document.getElementById('caption').innerHTML = image[1].alt;
+  
+    }
+
+    function openModalThree() {
+      modalBox.style.display = "block";
+      showOne.src="images/image03.png";
+      document.getElementById('caption').innerHTML = image[2].alt;
+    }
+
+    function openModalFour() {
+      modalBox.style.display = "block";
+      showOne.src="images/image04.png";
+      document.getElementById('caption').innerHTML = image[3].alt;
+    }
+
+    function openModalFive() {
+      modalBox.style.display = "block";
+      showOne.src="images/image05.png";
+      document.getElementById('caption').innerHTML = image[4].alt;
+    }
+
+    function openModalSix() {
+      modalBox.style.display = "block";
+      showOne.src="images/image06.png";
+      document.getElementById('caption').innerHTML = image[5].alt;
     }
     
     function closeModal() {
       //console.log("from closeModal");
     modalBox.style.display = "none";
     }
-
+    
   //Event Listeners
   window.addEventListener('scroll', trackScroll);
   TopBtn.addEventListener('click', backToTop);
@@ -126,8 +159,13 @@
   video.addEventListener("timeupdate", progPlay, false); //TIME UPDATE
 
   for(var i=0;i<image.length; i++){
-    console.log(i);
-  image[i].addEventListener("click", openModal);
+    //console.log(i);
+  image[0].addEventListener("click", openModalOne);
+  image[1].addEventListener("click", openModalTwo);
+  image[2].addEventListener("click", openModalThree);
+  image[3].addEventListener("click", openModalFour);
+  image[4].addEventListener("click", openModalFive);
+  image[5].addEventListener("click", openModalSix);
   }
 
   modalExit.addEventListener("click", closeModal, false);
