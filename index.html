@@ -39,7 +39,7 @@
           <div class="row">
             <h2 class="hidden">About Us</h2>
             
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-12 col-lg-6">
               <p>
                 Welcome to Agency Bolt. Consisting of 
                 Joanna Baile and Logan Litman,
@@ -51,7 +51,7 @@
                 </p>
             </div>
 
-            <div id="joanna" class="col-12 col-md-2"> <!--JOANNA-->
+            <div id="joanna" class="col-12 col-md-4 col-lg-2"> <!--JOANNA-->
                 <div class="social-media-links">
                     <ul>
                       <li><a href="https://www.facebook.com/itsjoannaa" target="_blank"><img src="images/logo-facebook.svg" width="25"/></a></li>
@@ -65,7 +65,7 @@
               </div>
             </div>
 
-            <div id="logan" class="col-12 col-md-2"> <!--LOGAN-->
+            <div id="logan" class="col-12 col-md-4 col-lg-2"> <!--LOGAN-->
               <div class="social-media-links">
                   <ul>
                     <li><a href="https://www.facebook.com/logan.litman.3" target="_blank"><img src="images/logo-facebook.svg" width="25"/></a></li>
@@ -91,20 +91,19 @@
                         Your browser does not support the video files! Please try another browser.
                     </video>
                 </div>
+                <div id="vidControls">
+                    <button id="rewind"><i class="fas fa-step-backward"></i></button>
+                    <button id="playPause"><i class="fas fa-play"></i></button>
+                    <input type="range" id="seek-bar" class="slider" value="0">
+                    <button id="muteVideo" class="control"><i class="fas fa-volume-up"></i></button>
+                    <input type="range" id="volumeBar" value="1" min="0" max="1" step="0.1">              
+                    <button id="full-screen" class="controls"><i class="fa fa-expand-arrows-alt"></i></button>
+                  </div>
             </div>
-            
-          <div id="vidControls">
-            <button id="rewind"><i class="fas fa-step-backward"></i></button>
-            <button id="playPause"><i class="fas fa-play"></i></button>
-            <input type="range" id="seek-bar" class="slider" value="0">
-            <button id="muteVideo" class="control"><i class="fas fa-volume-up"></i></button>
-            <input type="range" id="volumeBar" value="1" min="0" max="1" step="0.1">              
-            <button id="full-screen" class="controls"><i class="fa fa-expand-arrows-alt"></i></button>
-          </div>
         </div>
 
         <div class="col-12 col-md-6">
-            <p>This short video outlines some of the work we’ve done. 
+            <p id="vidText">This short video outlines some of the work we’ve done. 
                 The video highlights what we can do. 
                 Both as a team and individually. We 
                 hope you enjoy our work & and if you have any 
@@ -121,37 +120,38 @@
               <span id="exit" class="cursor">&times;</span>
               <div class="modal-content">
                   <div id="modal-img">
-                      <img src="images/joannawork1.png" alt="Joanna's experimental design">
+                      <img src="images/image01.png" id="first" alt="Joanna's experimental design">
                   </div>
                   <div class="caption-container">
-                      <p id="caption"></p>
+                    <p id="caption"></p>
                   </div>
               </div>
           </div>
   
             <div class="row portfolioImages" id="gallery">
-                <div class="col-12 col-md-4 portflio">
-                    <img src="images/joannawork1.png" alt="Joanna's experimental design" width="320" data-offset="0" class="img-fluid"/>
+                <div class="col-12 col-md-6 col-lg-4 portflio">
+                    <img src="images/image01.png" alt="Designed by Joanna Baile as an interactive music platform mockup." width="320" data-offset="0" class="img-fluid"/>
                   </div>
-                  <div class="col-12 col-md-4 portflio">
-                    <img src="images/joannawork2.png" alt="Joanna's LSFC project" width="320" data-offset="1" class="img-fluid"/>
+                  <div class="col-12 col-md-6 col-lg-4 portflio">
+                    <img src="images/image02.png" alt="Designed by Joanna Baile as a homepage for the London Squash and Fitness Club.  " width="320" data-offset="1" class="img-fluid"/>
                   </div>
-                  <div class="col-12 col-md-4 portflio">
-                    <img src="images/purevolume.png" alt="Joanna and Logan's project" width="320" data-offset="2" class="img-fluid"/>
+                  <div class="col-12 col-md-6 col-lg-4 portflio">
+                    <img src="images/image03.png" alt="Designed by Logan Litman and Joanna Baile as a collaborative project. Part of the homepage for a pop music/news desktop homepage." width="320" data-offset="2" class="img-fluid"/>
                   </div>
-                  <div class="col-12 col-md-4 portflio">
-                    <img src="images/work1logan.png" alt="Logan's design one" width="320" data-offset="3" class="img-fluid"/>
+                  <div class="col-12 col-md-6 col-lg-4 portflio">
+                    <img src="images/image04.png" alt="Designed by Logan Litman as freelance work for a club in Toronto" width="320" data-offset="3" class="img-fluid"/>
                   </div>
-                  <div class="col-12 col-md-4 portflio">
-                    <img src="images/work2logan.png" alt="Logan's design two" width="320" data-offset="4" class="img-fluid"/>
+                  <div class="col-12 col-md-6 col-lg-4 portflio">
+                    <img src="images/image05.png" alt="Designed by Logan Litman as freelance work for a club in Toronto" width="320" data-offset="4" class="img-fluid"/>
                   </div>
-                  <div class="col-12 col-md-4 portflio">
-                    <img src="images/agencyprojectlogan.png" alt="Logan's design three" width="320" data-offset="5" class="img-fluid"/>
+                  <div class="col-12 col-md-6 col-lg-4 portflio">
+                    <img src="images/image06.png" alt="Designed by Logan Litman as a logo/homepage for another agency" width="320" data-offset="5" class="img-fluid"/>
                   </div>
             </div>
         </section>
         
         <section id="contact-us">
+          <hr>
           <h2>Contact Us</h2>
             <form>
               <div class="row">
@@ -171,6 +171,7 @@
         
             <input type="submit" value="Submit">
           </form>
+          <hr>
         </section>
         
         <footer>
