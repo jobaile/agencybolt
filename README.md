@@ -1,7 +1,10 @@
 # Agency X Project
 Agency X Group Project
 
+![logo](https://github.com/jobaile/agencybolt/blob/master/images/logo.png?raw=true)
+
 ## Getting Started
+We started to brainstorm with our agency. Then Bolt was born.
 We created the documents necessary for the project.
 
 ## Built with
@@ -30,3 +33,11 @@ $ git clone https://github.com/jobaile/agencybolt.git
 $ cd agencybolt
 
 ```
+
+##Things We Wanted
+- [x] adobe xD prototypes
+- [x] light box; however, wanted more functionalities
+- [x] video player
+- [x] back to top
+- [ ] data filtering (joanna struggled with this)
+- [x] responsive

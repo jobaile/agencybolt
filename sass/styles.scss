@@ -45,6 +45,10 @@ hr {
     margin-top: 2em;
 }
 
+nav img { 
+    margin-left: 2em;
+}
+
 /***************************/
 /********ABOUT US***********/
 /***************************/
@@ -80,7 +84,7 @@ hr {
 
 #logan {
     margin-left: 60px;
-    margin-bottom: 1em;
+    margin-bottom: 30px;
 }
 
 .team-picture img{
@@ -88,6 +92,47 @@ hr {
     height: 200px;
     border-radius: 60%;
     clear: both;
+}
+
+.team-picture {
+    position: relative;
+    width: 50%;
+}
+
+.teamImg {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.team-picture:hover .teamImg {
+  opacity: 0.3;
+}
+
+.team-picture:hover .middle {
+  opacity: 1;
+}
+
+.team-text {
+  background-color: $main-colour;
+  color: white;
+  font-size: 1em;
+  padding: 16px 32px;
+  margin-left: 8px;
 }
 
 /***************************/
@@ -106,6 +151,33 @@ hr {
     color: $white;
 }
 
+button {
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+
+#vidControls {
+   margin-left: 2em;
+   margin-bottom: 1em;
+}
+input[type=range] {
+    -webkit-appearance: none;
+    width: 45%;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 12px;
+    width: 13px;
+    border-radius: 0px;
+    background: $main-colour;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -1.85px;
+  }
+
 /***************************/
 /*********VIDEO END*********/
 /***************************/
@@ -119,7 +191,7 @@ hr {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.9);
+    background-color: $bg-black;
 }
 
 .modal-content {
@@ -135,7 +207,7 @@ hr {
 }
 
 #exit {
-    color: white;
+    color: $white;
     position: absolute;
     top: 10px;
     right: 25px;
@@ -155,28 +227,11 @@ hr {
     margin: 0 auto;
     padding: 1em;
     color: white;
-    width: 500px;
+    width: 300px;
 }
 
 .caption-container p {
     font-size: 1em;
-}
-
-button {
-    border: 1;
-    background: none;
-    box-shadow: none;
-    border-radius: 10px;
-    padding: .75em;
-}
-
-
-button:hover {
-    border: 1;
-    background: $white;
-    box-shadow: none;
-    border-radius: 10px;
-    padding: .75em;
 }
 
 .filterBtn.active {
@@ -218,6 +273,19 @@ label {
     color: $white;
 }
 
+input[type=submit] {
+    padding:5px 15px; 
+    background:$white;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 2px;
+    border-radius: 2px; 
+}
+
+input[type=submit]:hover {
+    background: $main-colour;
+}
+
 /***************************/
 /*******CONTACT US END******/
 /***************************/
@@ -226,6 +294,12 @@ label {
 /***************************/
 /**********FOOTER***********/
 /***************************/
+
+button#backToTop {
+    border: 1;
+    box-shadow: none;
+    padding: .75em;
+}
 
 #backToTop {
     position: fixed;
@@ -280,6 +354,10 @@ label {
     #logan {
         margin-left: 40px;
     }
+
+    .team-text {
+        margin-left: 100px;
+      }
   }
 
   @media (min-width: 992px) { 
@@ -306,5 +384,11 @@ label {
         margin-left: 1em;
     }
 
+    .team-text {
+        margin-left: 120px;
+      }
 
-  } /*LARGE SIZE*/
+    .caption-container {
+        width: 500px;
+    }
+  } 

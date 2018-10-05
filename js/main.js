@@ -9,20 +9,15 @@
   var seekBar = document.querySelector("#seek-bar");
   var rewindVideo = document.querySelector("#rewind");
   var muteButton = document.querySelector("#muteVideo");
-  var volumeBar = document.querySelector('#volumeBar');
   var fullVideo = document.querySelector("#full-screen");
 
   var modalBox = document.querySelector("#modalBox");
   var modalExit = document.querySelector("#exit");
-  var portArray = ["image01", "image02", "image03", "image04", "image05", "image06"]; 
   var portfolio = document.querySelector("#gallery");
   var image = portfolio.querySelectorAll("img");
-  var showOne = document.querySelector("#first"); //modal image content
-
-  var elem = document.querySelector(".caption-container"); // caption
+  var showOne = document.querySelector("#first"); 
 
   //Functions
-
   function playVideo(){
     console.log("from playVideo");
     if (video.paused) {
@@ -35,13 +30,13 @@
 }
 
   function progressBar(){
-    //console.log("from progressBar");
+    console.log("from progressBar");
     var time = video.duration * (seekBar.value / 100);
     video.currentTime = time;
   }
 
   function rewindVid(){
-    //console.log("from rewind");
+    console.log("from rewind");
     video.currentTime -= 5;
   }
 
@@ -57,21 +52,13 @@
     video.muted = false;
     document.getElementById("muteVideo").innerHTML='<button id="muteVideo" class="control"><i class="fas fa-volume-up"></i></button>';
     theVolumeSVG.dataset.icon = "volume-up";
-    volumeBar.value = 1;
-    vidPlayer.volume = 1;
     } else {
     video.muted = true;
     document.getElementById("muteVideo").innerHTML='<button id="muteVideo" class="control"><i class="fas fa-volume-off"></i></button>';
-    volumeBar.value = 0;
-    vidPlayer.volume = 0;
     }
   }
 
-  function changeVolume() {
-    vidPlayer.volume = volumeBar.value;
-  }
-
-  function fullScreen(){ //This will give default video controls
+  function fullScreen(){
     console.log("from fullScreen");
     if (video.requestFullscreen) {
       video.requestFullscreen();
@@ -150,13 +137,12 @@
   window.addEventListener('scroll', trackScroll);
   TopBtn.addEventListener('click', backToTop);
 
-  playButton.addEventListener("click", playVideo, false); //VIDEO
-  seekBar.addEventListener("change", progressBar, false); //SEEK BAR
-  muteButton.addEventListener("click", muteVideo, false); //MUTE
-  volumeBar.addEventListener('change', changeVolume, false); // VOLUME BAR
-  rewindVideo.addEventListener("click", rewindVid, false); //REWIND VIDEO X
+  playButton.addEventListener("click", playVideo); //VIDEO
+  seekBar.addEventListener("change", progressBar); //SEEK BAR
+  muteButton.addEventListener("click", muteVideo); //MUTE
+  rewindVideo.addEventListener("click", rewindVid); //REWIND VIDEO X
   fullVideo.addEventListener("click", fullScreen); //FULLSCREEN
-  video.addEventListener("timeupdate", progPlay, false); //TIME UPDATE
+  video.addEventListener("timeupdate", progPlay); //TIME UPDATE
 
   for(var i=0;i<image.length; i++){
     //console.log(i);
@@ -168,7 +154,7 @@
   image[5].addEventListener("click", openModalSix);
   }
 
-  modalExit.addEventListener("click", closeModal, false);
+  modalExit.addEventListener("click", closeModal);
 
 
 })();
