@@ -7,15 +7,14 @@
     <title>Bolt Designs</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="sass/style.css" rel="stylesheet"> <!--SASS CSS-->
-    <link href="css/main.css" rel="stylesheet"> <!--OTHER CSS-->
+    <link href="sass/main.css" rel="stylesheet"> <!--SASS CSS-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
 
   <body>
 
-          <nav class="navbar navbar-expand-lg navbar-dark">
-              <img src="images/logo.png" width="220" height="200"/>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <img src="images/logo.png" width="100" height="120"/>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -23,69 +22,84 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#about-us">About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Our Work</a>
+                    <a class="nav-link" href="#our-work">Our Work</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Contact Us</a>
+                      <a class="nav-link" href="#contact-us">Contact Us</a>
                   </li>
                 </ul>
               </div>
             </nav>
 
-      <div class="container-fluid">
+      <div class="container">
         
-        <section>
-          <div class="row" id="about-section">
+        <section id="about-us">
+          <div class="row">
             <h2 class="hidden">About Us</h2>
             
-            <div class="col col-md-6">
+            <div class="col-12 col-md-6">
               <p>
                 Welcome to Agency Bolt. Consisting of 
-                Joanna Baile (left) and Logan Litman (right),
+                Joanna Baile and Logan Litman,
                 we are two students in a combined program 
                 between Western University and Fanshawe 
-                College called MTP. We study Media 
+                College called MTP. We study Media,
                 Information and Technology, as well as 
                 Interactive Media Design. 
                 </p>
             </div>
 
-            <div class="team-picture" id="joanna"> <!--JOANNA-->
+            <div id="joanna" class="col-12 col-md-2"> <!--JOANNA-->
                 <div class="social-media-links">
                     <ul>
-                      <li><a href="https://www.facebook.com/itsjoannaa" target="_blank"><img src="images/logo-facebook.png" width="35"/></a></li>
-                      <li><a href="https://www.instagram.com/joannabaile/?hl=en" target="_blank"><img src="images/logo-instagram.svg"width="35"/></a></li>
-                      <li><a href="https://www.linkedin.com/in/joannabaile/" target="_blank"><img src="images/logo-linkedin.svg" width="35"/></a></li>
+                      <li><a href="https://www.facebook.com/itsjoannaa" target="_blank"><img src="images/logo-facebook.svg" width="25"/></a></li>
+                      <li><a href="https://www.instagram.com/joannabaile/?hl=en" target="_blank"><img src="images/logo-instagram.svg"width="25"/></a></li>
+                      <li><a href="https://www.linkedin.com/in/joannabaile/" target="_blank"><img src="images/logo-linkedin.svg" width="25"/></a></li>
                     </ul>
                   </div>
 
-            <div class="col col-md-3">
-                <p class="box">Joanna Baile</p>
+              <div class="team-picture">
+                  <img src="images/joanna.png">
+              </div>
             </div>
 
-          </div>
-          <div class="team-picture col col-md-3" id="logan"> <!--LOGAN-->
+            <div id="logan" class="col-12 col-md-2"> <!--LOGAN-->
               <div class="social-media-links">
                   <ul>
-                    <li><a href="https://www.facebook.com/logan.litman.3" target="_blank"><img src="images/logo-facebook.png" width="35"/></a></li>
-                    <li><a href="https://www.instagram.com/loganlitman/?hl=en" target="_blank"><img src="images/logo-instagram.svg"width="35"/></a></li>
-                    <li><a href="https://www.linkedin.com/in/logan-litman-070b49145/" target="_blank"><img src="images/logo-linkedin.svg" width="35"/></a></li>
+                    <li><a href="https://www.facebook.com/logan.litman.3" target="_blank"><img src="images/logo-facebook.svg" width="25"/></a></li>
+                    <li><a href="https://www.instagram.com/loganlitman/?hl=en" target="_blank"><img src="images/logo-instagram.svg"width="25"/></a></li>
+                    <li><a href="https://www.linkedin.com/in/logan-litman-070b49145/" target="_blank"><img src="images/logo-linkedin.svg" width="25"/></a></li>
                   </ul>
                 </div>
-            <p class="box">Logan Litman</p>
-        </div>
+
+          <div class="team-picture">
+              <img src="images/logan.jpeg">
+          </div>
+
         </section>
 
-        <section> 
-          <div class="container-fluid" id="videoPlayer">
+        <section>
+          <div class="row container">
+          <div class="col-12 col-md-6" id="videoPlayer">
+            <p>This short video outlines some of the work we’ve done. 
+                The video highlights what we can do. 
+                Both as a team and individually. We 
+                hope you enjoy our work & and if you have any 
+                questions or want to see more, please feel free to reach 
+                out and <a href="#contact-us">contact us</a>!  
+                </p>
+          </div>
 
-            <video id="headerVid" poster="" alt="promotional video">
-              <source src="video/Bolt-1.mp4" type="video/mp4"/>
-                Your browser does not support the video files! Please try another browser.
-            </video>
+          <div class="col-12 col-md-6">
+              <div class="embed-responsive embed-responsive-4by3">
+                  <video id="headerVid" class="embed-responsive-item" poster="" alt="promotional video">
+                      <source src="video/bolt-1.mp4" type="video/mp4"/>
+                        Your browser does not support the video files! Please try another browser.
+                    </video>
+                </div>
             
             <div id="vidControls">
               <button id="rewind"><i class="fas fa-step-backward"></i></button>
@@ -96,50 +110,47 @@
               <button id="full-screen" class="controls"><i class="fa fa-expand-arrows-alt"></i></button>
             </div>
           </div>
+        </div> 
         </section>
         
-        <section>
+        <section id="our-work">
           <h2>Our Work</h2>
-          <div class="filterBtnContainer">
-            <button class="filterBtn active" id="btnAll">Show All</button>
-            <button class="filternBtn" id="btnLogan">Logan</button>
-            <button class="filterBtn" id="btnJoanna">Joanna</button>
-          </div>
-          <div class="row portimgs">
+          <div class="row portfolioImages">
             <div class="col-12 col-md-4 portflio portJoanna all">
-              <img src="images/joannawork1.png" width="300"/>
+              <img src="images/joannawork1.png" width="320" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-4 portflio portJoanna all">
-              <img src="images/joannawork2.png" width="300"/>
+              <img src="images/joannawork2.png" width="320" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-4 portflio portJoanna portLogan all">
-              <img src="images/purevolume.png" width="300"/>
+              <img src="images/purevolume.png" width="320" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-4 portflio portLogan all">
-              <img src="images/work1logan.png" width="300"/>
+              <img src="images/work1logan.png" width="320" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-4 portflio portLogan all">
-              <img src="images/work2logan.png" width="300"/>
+              <img src="images/work2logan.png" width="320" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-4 portflio portLogan all">
-              <img src="images/agencyprojectlogan.png" width="300"/>
+              <img src="images/agencyprojectlogan.png" width="320" class="img-fluid"/>
             </div>
+          </div>
         </section>
         
-        <section id="contact">
+        <section id="contact-us">
           <h2>Contact Us</h2>
             <form>
               <div class="row">
                 <div class="col contact">
-                    <label></label>
+                    <label>Name:</label>
                     <input class="contactus" type="text" name="firstname" placeholder="Name" required>
                 </div>
                 <div class="col contact">
-                    <label></label>
+                    <label>E-mail:</label>
                     <input class="contactus" type="text" name="email" placeholder="Email" required>
                 </div>
                 <div class="col contact">
-                    <label></label>
+                    <label>Message:</label>
                     <textarea class="contactus" id="message" name="Message" style="height:150px" placeholder="Message" required></textarea>
                 </div>
               </div>
@@ -150,7 +161,7 @@
         
         <footer>
             <button id="backToTop">Back To Top</button>
-          <img src="images/logo.png" width="50" height="50"/>
+          <img src="images/logo.png" width="50" height="60"/>
         </footer>
       </div>
 
