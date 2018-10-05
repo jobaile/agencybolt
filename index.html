@@ -12,27 +12,26 @@
   </head>
 
   <body>
-
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <img src="images/logo.png" width="100" height="120"/>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="#"><img src="images/logo.png" width="100" height="120"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
             
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#about-us">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#our-work">Our Work</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#contact-us">Contact Us</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#about-us">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#our-work">Our Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us">Contact Us</a>
+          </li>
+         </ul>
+      </div>
+    </nav>
 
       <div class="container">
         
@@ -82,8 +81,29 @@
         </section>
 
         <section>
-          <div class="row container">
-          <div class="col-12 col-md-6" id="videoPlayer">
+          <div class="row" id="video-section">
+
+          <div class="col-12 col-md-6">
+            <div id="vidBg">
+              <div class="embed-responsive embed-responsive-4by3">
+                  <video id="headerVid" class="embed-responsive-item" poster="" alt="promotional video">
+                      <source src="video/bolt-1.mp4" type="video/mp4"/>
+                        Your browser does not support the video files! Please try another browser.
+                    </video>
+                </div>
+            </div>
+            
+          <div id="vidControls">
+            <button id="rewind"><i class="fas fa-step-backward"></i></button>
+            <button id="playPause"><i class="fas fa-play"></i></button>
+            <input type="range" id="seek-bar" class="slider" value="0">
+            <button id="muteVideo" class="control"><i class="fas fa-volume-up"></i></button>
+            <input type="range" id="volumeBar" value="1" min="0" max="1" step="0.1">              
+            <button id="full-screen" class="controls"><i class="fa fa-expand-arrows-alt"></i></button>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
             <p>This short video outlines some of the work we’ve done. 
                 The video highlights what we can do. 
                 Both as a team and individually. We 
@@ -92,49 +112,43 @@
                 out and <a href="#contact-us">contact us</a>!  
                 </p>
           </div>
-
-          <div class="col-12 col-md-6">
-              <div class="embed-responsive embed-responsive-4by3">
-                  <video id="headerVid" class="embed-responsive-item" poster="" alt="promotional video">
-                      <source src="video/bolt-1.mp4" type="video/mp4"/>
-                        Your browser does not support the video files! Please try another browser.
-                    </video>
-                </div>
-            
-            <div id="vidControls">
-              <button id="rewind"><i class="fas fa-step-backward"></i></button>
-              <button id="playPause"><i class="fas fa-play"></i></button>
-              <input type="range" id="seek-bar" class="slider" value="0">
-              <button id="muteVideo" class="control"><i class="fas fa-volume-up"></i></button>
-              <input type="range" id="volumeBar" value="1" min="0" max="1" step="0.1">              
-              <button id="full-screen" class="controls"><i class="fa fa-expand-arrows-alt"></i></button>
-            </div>
-          </div>
-        </div> 
-        </section>
+      </section>
         
         <section id="our-work">
           <h2>Our Work</h2>
-          <div class="row portfolioImages">
-            <div class="col-12 col-md-4 portflio portJoanna all">
-              <img src="images/joannawork1.png" width="320" class="img-fluid"/>
-            </div>
-            <div class="col-12 col-md-4 portflio portJoanna all">
-              <img src="images/joannawork2.png" width="320" class="img-fluid"/>
-            </div>
-            <div class="col-12 col-md-4 portflio portJoanna portLogan all">
-              <img src="images/purevolume.png" width="320" class="img-fluid"/>
-            </div>
-            <div class="col-12 col-md-4 portflio portLogan all">
-              <img src="images/work1logan.png" width="320" class="img-fluid"/>
-            </div>
-            <div class="col-12 col-md-4 portflio portLogan all">
-              <img src="images/work2logan.png" width="320" class="img-fluid"/>
-            </div>
-            <div class="col-12 col-md-4 portflio portLogan all">
-              <img src="images/agencyprojectlogan.png" width="320" class="img-fluid"/>
-            </div>
+
+          <div id="modalBox" class="modal">
+              <span id="exit" class="cursor">&times;</span>
+              <div class="modal-content">
+                  <div id="modal-img">
+                      <img src="images/joannawork1.png" alt="Joanna's experimental design">
+                  </div>
+                  <div class="caption-container">
+                      <p id="caption"></p>
+                  </div>
+              </div>
           </div>
+  
+            <div class="row portfolioImages" id="gallery">
+                <div class="col-12 col-md-4 portflio">
+                    <img src="images/joannawork1.png" alt="Joanna's experimental design" width="320" data-offset="0" class="img-fluid"/>
+                  </div>
+                  <div class="col-12 col-md-4 portflio">
+                    <img src="images/joannawork2.png" alt="Joanna's LSFC project" width="320" data-offset="1" class="img-fluid"/>
+                  </div>
+                  <div class="col-12 col-md-4 portflio">
+                    <img src="images/purevolume.png" alt="Joanna and Logan's project" width="320" data-offset="2" class="img-fluid"/>
+                  </div>
+                  <div class="col-12 col-md-4 portflio">
+                    <img src="images/work1logan.png" alt="Logan's design one" width="320" data-offset="3" class="img-fluid"/>
+                  </div>
+                  <div class="col-12 col-md-4 portflio">
+                    <img src="images/work2logan.png" alt="Logan's design two" width="320" data-offset="4" class="img-fluid"/>
+                  </div>
+                  <div class="col-12 col-md-4 portflio">
+                    <img src="images/agencyprojectlogan.png" alt="Logan's design three" width="320" data-offset="5" class="img-fluid"/>
+                  </div>
+            </div>
         </section>
         
         <section id="contact-us">
@@ -161,9 +175,9 @@
         
         <footer>
             <button id="backToTop">Back To Top</button>
-          <img src="images/logo.png" width="50" height="60"/>
+          <a href="#"><img src="images/logo.png" width="50" height="60"/></a>
         </footer>
-      </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

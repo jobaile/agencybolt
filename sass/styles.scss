@@ -2,7 +2,7 @@
 @import '_queries';
 
 body { 
-    background: $bg-main no-repeat center center fixed;
+    background: $bg-main no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -23,13 +23,18 @@ ul li a {
     color: $white;
 }
 
+.container {
+    background-color: $black;
+}
+
+a.nav-link {
+    margin-left: 8em;
+    margin-bottom: 1em;
+}
+
 /***************************/
 /********ABOUT US***********/
 /***************************/
-
-#about-us{
-    background-color: $black;
-}
 
 #about-us p {
     margin: 1em 1em 2em 1em;
@@ -64,24 +69,75 @@ ul li a {
     margin-left: 60px;
     margin-bottom: 1em;
 }
-/***************************/
-/******ABOUT US END*********/
-/***************************/
 
 .team-picture img{
     width: 200px;
     height: 200px;
     border-radius: 60%;
-    border:1px solid #50caf9;
     clear: both;
 }
 
 /***************************/
-/*********OUR WORK**********/
+/******ABOUT US END*********/
 /***************************/
-#our-work {
-    background: #50caf9;
+
+/***************************/
+/***********VIDEO***********/
+/***************************/
+
+#video-section {
+    background-color: $white;
 }
+#vidBg {
+    background-color: $main-colour;
+    padding: 1em;
+    height: 75%;
+    margin-top: 2em;
+}
+
+/***************************/
+/*********VIDEO END*********/
+/***************************/
+
+#modalBox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: 0 auto;
+    background: transparent;
+    width: 90%;
+    max-width: 1200px;
+}
+
+#modal-img img {
+    width: 350px;
+}
+
+#exit {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  #exit:hover,
+  #exit:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 button {
     border: 1;
@@ -107,6 +163,7 @@ button:hover {
 
 .portfolioImages img {
     margin: 1em;
+    border:2px solid $main-colour;
 }
 
 /***************************/
@@ -118,9 +175,6 @@ button:hover {
 /*******CONTACT US********/
 /***************************/
 
-#contact-us {
-    background: red;
-}
 .contactus {
     width: 350px;
     height: 50px;
@@ -133,11 +187,15 @@ button:hover {
 }
 
 #contact {
-    color: white;
+    color: $white;
+}
+
+label {
+    color: $white;
 }
 
 /***************************/
-/*******CONTACT US END********/
+/*******CONTACT US END******/
 /***************************/
 
 
@@ -148,8 +206,8 @@ button:hover {
 #backToTop {
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    z-index: 9999;
+    right: 10px;
+    z-index: 998;
     text-align: center;
     line-height: 20px;
     background: #f5f5f5;
@@ -162,3 +220,17 @@ button:hover {
 /***************************/
 /********FOOTER END*********/
 /***************************/
+
+@media (min-width: 768px) { /*TABLET SIZE*/
+    nav a img {
+        margin-left: 80px;
+    }
+
+    a.nav-link {
+        margin-left: 50px;
+    }
+  }
+
+  @media (min-width: 992px) { 
+      
+  } /*LARGE SIZE*/
